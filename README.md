@@ -1,4 +1,4 @@
-# Marco's Hyprland dotfiles
+# Marware's Hyprland dotfiles
 Here are my dotfiles and setup for arch + hyprland. These dotfiles include the following:
 - Fastfetch
 - Hyprland
@@ -14,12 +14,12 @@ Here are my dotfiles and setup for arch + hyprland. These dotfiles include the f
 
 You will need git to clone the repo
 ```
-git clone https://github.com/marcoriola/dotfiles .dotfiles
+git clone https://github.com/marwaree/dotfiles .dotfiles
 cd .dotfiles
 chmod +x install.sh
 ./install.sh #Follow the instructions
 ```
 If you want to do this in one line:
 ```
-git clone https://github.com/marcoriola/dotfiles .dotfiles && cd .dotfiles && chmod +x install.sh && ./install.sh
+git clone https://github.com/marwaree/dotfiles .dotfiles && cd .dotfiles && chmod +x install.sh && ./install.sh
 ```
