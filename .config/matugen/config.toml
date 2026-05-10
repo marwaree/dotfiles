@@ -1,6 +1,6 @@
 [config.wallpaper]
 command = "awww"
-arguments = ["img", "--transition-type", "any", "--transition-fps", "60"]
+arguments = ["img", "-a", "--transition-type", "any", "--transition-fps", "60"]
 set = true
 
 [templates.waybar]

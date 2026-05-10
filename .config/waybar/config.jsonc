@@ -26,7 +26,8 @@
 	],
 
 "modules-center": [
-	"hyprland/workspaces#numbers",
+    // Change to #numbers for a 1 monitor setup
+	"hyprland/workspaces#numbers-2-monitors",
 	],
 
 "modules-right": [
