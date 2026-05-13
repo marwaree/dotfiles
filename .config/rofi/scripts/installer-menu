@@ -1,7 +1,0 @@
-#!/bin/bash
-option=$(printf "Install package\nInstall AUR" | rofi -dmenu -p "Install")
-
-case "$option" in
-    "Install package") ghostty -e ~/scripts/omarchy-pkg-install ;;
-    "Install AUR") ghostty -e ~/scripts/omarchy-pkg-aur-install ;;
-esac
