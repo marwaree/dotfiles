@@ -1,9 +1,8 @@
--- TODO: get cool keymaps from theprimeagen
+-- TODO: migrate to lazy.nvim. start at conform.nvim
 
 require("keymaps")
+require("lazy")
 require("set")
-require("pack_init")
-require("plugins")
 
 vim.loader.enable()
 vim.g.have_nerd_font = true
