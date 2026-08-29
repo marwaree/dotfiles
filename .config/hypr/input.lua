@@ -13,7 +13,7 @@ hl.config({
 
     -- Change speed of keyboard repeat.
     repeat_rate = 40,
-    repeat_delay = 250,
+    repeat_delay = 300,
 
     -- Start with numlock on by default.
     --     numlock_by_default = true,
