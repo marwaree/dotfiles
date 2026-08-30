@@ -1,7 +1,9 @@
-local function gh(repo) return 'https://github.com/' .. repo end
-
-  vim.pack.add { gh 'folke/tokyonight.nvim' }
-  ---@diagnostic disable-next-line: missing-fields
-  require('tokyonight').setup {
-    transparent = true,
-  }
+return {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+        style = "night",
+        transparent = true,
+    },
+}

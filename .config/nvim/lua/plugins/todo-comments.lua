@@ -1,4 +1,7 @@
-local function gh(repo) return 'https://github.com/' .. repo end
-
-vim.pack.add { gh 'folke/todo-comments.nvim' }
-require('todo-comments').setup { signs = false }
+return {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+        signs = false,
+    },
+}
