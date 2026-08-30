@@ -5,7 +5,7 @@ require("config.set")
 vim.loader.enable()
 vim.g.have_nerd_font = true
 
-vim.cmd.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("kanagawa")
 
 vim.diagnostic.config {
     update_in_insert = false,
@@ -34,4 +34,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",
     group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
     callback = function() vim.hl.on_yank() end,
+})
+
+-- Change CWD on buffer switch
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("UserLspCwd", { clear = true }),
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client and client.config.root_dir then vim.api.nvim_set_current_dir(client.config.root_dir) end
+    end,
 })
