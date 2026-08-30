@@ -22,3 +22,5 @@ vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 
 -- replace all instances of the word below the cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
