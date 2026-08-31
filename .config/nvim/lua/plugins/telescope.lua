@@ -8,7 +8,6 @@ return {
         {
             "nvim-telescope/telescope-fzf-native.nvim",
             build = "make",
-            cond = function() return vim.fn.executable("make") == 1 end,
         },
     },
     config = function()
@@ -42,11 +41,12 @@ return {
                 ["ui-select"] = {
                     require("telescope.themes").get_dropdown {},
                 },
+                fzf = {},
             },
         }
 
-        pcall(telescope.load_extension, "ui-select")
-        pcall(telescope.load_extension, "fzf") -- Recommended if using fzf-native
+        require("telescope").load_extension("ui-select")
+        require("telescope").load_extension("fzf") -- Recommended if using fzf-native
 
         -- Keymaps
         vim.keymap.set("n", "<leader>ff", builtin.find_files)

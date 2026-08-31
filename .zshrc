@@ -42,6 +42,15 @@ alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
 
+# Alias nvim to fg if an nvim process is suspended
+nvim() {
+  if [[ "${(v)jobtexts}" =~ "nvim" ]]; then
+    fg %nvim
+  else
+    command nvim "$@"
+  fi
+}
+
 zd() {
   if [ $# -eq 0 ]; then
     builtin cd ~ && return

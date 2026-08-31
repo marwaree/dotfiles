@@ -26,6 +26,8 @@ return {
                 -- Rename the variable under your cursor.
                 map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
 
+                vim.keymap.set({ "n", "v" }, "ca", vim.lsp.buf.code_action)
+
                 map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
                 map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 
