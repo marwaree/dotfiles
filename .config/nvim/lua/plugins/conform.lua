@@ -4,6 +4,7 @@ return {
     cmd = { "ConformInfo" },
     opts = {
         formatters_by_ft = {
+            toml = { "taplo" },
             lua = { "stylua" },
             python = { "isort", "black" },
             rust = { "rustfmt", lsp_format = "fallback" },

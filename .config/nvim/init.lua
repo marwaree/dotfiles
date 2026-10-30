@@ -1,6 +1,7 @@
 require("config.keymaps")
 require("config.lazy")
 require("config.set")
+require("config.notes")
 
 vim.loader.enable()
 vim.g.have_nerd_font = true

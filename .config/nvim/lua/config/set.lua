@@ -44,6 +44,12 @@ vim.o.splitbelow = true
 vim.o.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
+vim.opt.conceallevel = 2
+vim.opt.concealcursor = "nc"
+
+vim.opt.path:append("~/Notes/**") -- Lets 'gf' find files across subfolders
+vim.opt.suffixesadd:append(".md") -- Lets 'gf' open files without typing '.md'
+
 -- Preview substitutions live, as you type!
 vim.o.inccommand = "split"
 

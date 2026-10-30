@@ -56,6 +56,6 @@ return {
         vim.keymap.set("n", "<leader>fb", builtin.buffers)
 
         -- Search neovim config
-        vim.keymap.set("n", "<leader>fn", function() builtin.find_files { cwd = vim.fn.stdpath("config"), follow = true } end)
+        vim.keymap.set("n", "<leader>fc", function() builtin.find_files { cwd = vim.fn.stdpath("config"), follow = true } end)
     end,
 }
