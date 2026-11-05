@@ -8,11 +8,10 @@ font-style = SemiBold
 font-style-bold = Bold
 font-style-italic = SemiBold Italic
 font-style-bold-italic = Bold Italic
-
 window-padding-x = 7
 
 term = xterm-256color
 
 confirm-close-surface = false
 
-theme = Kanagawa Wave
+config-file = ?"~/.local/state/omarchy/current/theme/ghostty.conf"   
