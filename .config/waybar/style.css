@@ -1,0 +1,46 @@
+@define-color foreground #eee;
+@define-color foreground-inactive #aaaaaa;
+@define-color background #000000;
+
+* {
+    font-family: CaskaydiaMono Nerd Font;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+}
+
+#waybar {
+    color: @foreground;
+    background-color: @background;
+}
+
+#workspaces button {
+    color: @foreground;
+    background-color: #222;
+    padding: 0 5px;
+}
+
+#workspaces button.active {
+    color: @foreground;
+    border-bottom: 2px solid @foreground;
+}
+
+#workspaces button.empty {
+    background-color: @background;
+    color: @foreground-inactive;
+}
+
+#memory,
+#custom-platform-profile {
+    padding-left: 1em
+}
+
+#wireplumber,
+#battery,
+#idle_inhibitor,
+#language,
+#network,
+#bluetooth,
+#tray {
+    padding-right: 1em 
+}
