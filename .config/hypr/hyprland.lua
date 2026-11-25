@@ -40,7 +40,7 @@ end
 -- Set programs that you use
 local terminal = "ghostty"
 local fileManager = "nautilus"
-local menu = "rofi -show drun"
+local menu = "rofi -show combi"
 local browser = "helium-browser"
 
 -------------------
@@ -219,6 +219,13 @@ hl.config({
 	},
 })
 
+hl.window_rule({
+    match = { class = "^(steam)$" },
+    float = true,
+    center = true,
+    size = { 1200, 700 },
+})
+
 ---------------
 ---- INPUT ----
 ---------------
@@ -247,8 +254,10 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.kill())
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu -display-columns 2 | cliphist decode | wl-copy"))
-hl.bind("SUPER_L", hl.dsp.exec_cmd(menu), { release = true })
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
+hl.bind("SUPER_L",         hl.dsp.exec_cmd(menu), { release = true })
+hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("rofi -show window"))
+hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("steam"))
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. " + D", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))

@@ -1,0 +1,31 @@
+configuration {
+    modi: "combi";
+    combi-modes: "drun,run";
+    show-icons:                 true;
+    display-drun:               "";
+    display-combi:              "󰌧";
+    display-run:                " ";
+    display-window:             "";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+}
+
+@theme "ib"
+
+// color pallete
+* {
+    font:                        "CaskaydiaMono Nerd Font 12";
+    background:                  #000000;
+    background-alt:              #000000;
+    foreground:                  #FFFFFF;
+    selected:                    #7e9cd8;
+    active:                      #FFA9E2;
+    urgent:                      #FF6E84;
+}
+
+// theme image (image height is set via y-padding)
+inputbar {
+    background-image:            url("~/Wallpapers/wallhaven-vqwlwl.jpg", width);
+    padding:                     75px 60px;
+}
+

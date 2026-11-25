@@ -1,7 +1,7 @@
 ## Installation
 
 ```
-git clone https://github.com/marwaree/omarchy-dotfiles.git
+git clone https://github.com/marwaree/dotfiles.git
 cd dotfiles
 stow .
 ```
@@ -9,9 +9,6 @@ stow .
 # Personal preference
 
 ```
-omarchy-webapp-remove-all
-sudo pacman -S ghostty 
+sudo pacman -S ghostty
 yay -S helium-browser-bin lunar-client-bin vesktop-bin
-omarchy-install-gaming-steam
-omarchy-install-gaming-xbox-controllers
 ```
